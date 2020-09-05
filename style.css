@@ -1,0 +1,81 @@
+*{
+	margin: 0;
+	padding:0; 
+	box-sizing: border-box; ;
+}
+body{
+	font: normal 16px 'Alegreya SC';
+	line-height: 1.6; 
+	background-color: darkgrey;
+}
+.container{
+	width: 100%;
+	margin: auto; 
+}
+.box-1{
+	border: 1px solid floralwhite;
+	background-color: floralwhite;
+	margin: 50px 700px 0px 700px;
+	font-size: 25px;
+	height: auto;
+	padding:25px;
+	border-radius: 20px;
+
+}
+.box-1 h1{
+	text-align: center;
+	padding-bottom: 2%; 
+}
+.box-1 button{
+	font-size: 20px;
+	font-family: 'Alegreya SC';
+}
+.box-1 input[type="text"], .box-1 textarea{
+	padding: 20px ;
+	width: 70%;
+	border-radius: 5px;
+	margin-bottom: 500px;
+	margin-left: 10px;
+	font-family: 'Alegreya SC';
+}
+.box-1 input[type="text"]:focus{
+ 	border: 3px solid black;
+}
+.box-1 label{
+	font-size: 20px;
+	padding-left: 10px;
+}
+#addbutton{
+	display: inline-block;
+	position: absolute;
+	top: 21.3%;
+	left: 55%;
+	padding: 16px 30px 16px 30px;
+	border-radius: 7px;
+	margin-left: 1%;
+}
+#addbutton:hover{
+	background-color: gray;
+}
+#removebutton{
+	margin-right: 50px;
+	margin-left: 30px;
+	padding: 20px 30px 20px 30px; 
+	border-radius: 10px;
+}
+#removebutton:hover{
+	background-color: gray;
+}
+#clear{
+	margin-left: 75px;
+	padding: 20px 30px 20px 30px; 
+	border-radius: 10px;
+}
+#clear:hover{
+	background-color: gray;
+}
+.my-footer{
+	padding: 25px 25px 20px 25px; 
+	text-align: center;
+	font-size: 15px;
+}
