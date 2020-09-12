@@ -216,7 +216,7 @@ a:hover span:nth-child(4){
 	border-radius: 5px;
 	margin-left: 10px;
 	font-family: 'Alegreya SC';
-	margin-bottom: 5%;
+	margin-bottom: 1%;
 }
 .box-1 input[type="text"]:focus{
  	border: 3px solid black;
@@ -229,8 +229,12 @@ a:hover span:nth-child(4){
 	border-radius: 5px;
 	 
 }
+.par-1{
+	font-size: 15px;
+	padding-left: 10px;
+}
 .box-2{
-	margin-top: 500px;
+	margin-top: 3%;
 	position: static;
 	height: auto;
 }
@@ -266,4 +270,9 @@ a:hover span:nth-child(4){
 	padding: 25px 25px 20px 25px; 
 	text-align: center;
 	font-size: 15px;
+}
+
+.checked{
+	text-decoration: line-through;
+	color:green;
 }
