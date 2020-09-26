@@ -3,51 +3,32 @@
 <head>
 	<title>ToDo List</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="wrapper">
-		<a href="todolist.html" target="_self">
-			<span></span>
-			<span></span>
-			<span></span> 
-			<span></span> 
-			 Exit</a>
-			<div class="box-1">
-					<h1>TO DO LIST</h1>
-
-					<label>ENTER TO DO LIST</label> 
-					<input id="myInput" type="text" name="todo" placeholder="TO DO">
-					<button id="addbutton" onclick="newElement()">Add</button>
-					<div class="par-1">Double click to mark the work done.</div>
-					<div class="par-1">Number of works to do <span id="count"></span>.</div>
-					<ol id="myList" type="1">
+		<div class="box-1">
+			<h1><i class="material-icons">&#xe614;</i> ToDo List</h1>
+			<div class="par-1">Ongoing Works - <span id="carrier">0</span></div>
+			<input id="myInput" type="text" name="todo" placeholder="Enter to do.." autocomplete="off"><button id="addbutton" onclick="addElement()">Add</button>
+			<div class="box-2">
+				<span style="position: absolute; left:25px; color: white; font-weight: bold; font-size: 20px;">Click the items if done:</span>
+				<i class="material-icons" style="position:absolute;left: 450px; color: white;">&#xe896;</i>
+				<ol id="myList">
 					
-					</ol>
-					<div class="box-2">
-					
-					<button id="removebutton" onclick="removeToDoItem()">Remove</button>
-					<button id="clear" onclick="clearToDoItem()">Clear List</button>
-					</div>
-					<footer class="my-footer">
-					Copyright &copy; 2020
-					</footer>
-				</div>
-				<div class="box">
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-						<div></div>
-				</div>
+				</ol>
 			</div>
+			<div class="box-3">
+				<button id="removebutton">Remove</button>
+				<button id="clear" onclick="clearToDoItem()">Clear List</button>
+			</div>
+			<footer class="my-footer">
+				Copyright &copy; 2020
+			</footer>
 		</div>
+	</div>
 <script src="script.js"></script>
 </body>
 </html>

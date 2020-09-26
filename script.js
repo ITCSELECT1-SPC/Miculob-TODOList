@@ -1,6 +1,8 @@
-
-//add
-function newElement() {
+var uniqueID = 1;
+var counter = 0;
+var reset = 0;
+removebutton = document.getElementById('removebutton');
+function addElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
@@ -8,43 +10,37 @@ function newElement() {
   if (inputValue === '') {
     alert("You must write something!");
   } else {
+    counter++;
     document.getElementById("myList").appendChild(li);
+    li.setAttribute('id', uniqueID);
+    document.getElementById('carrier').innerHTML =counter;
+    uniqueID++;
+    console.log(li);
   }
   document.getElementById("myInput").value = "";
-  
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
 }
-
-
-//remove
-var removeButton = document.getElementById("removebutton");
-removeButton.addEventListener("dblclick", removeToDoItem);
-function removeToDoItem() {
-	for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-}
-
+// Check part
 var list = document.querySelector('ol');
-list.addEventListener('dblclick', function(ev) {
+list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
-  } 
-}, false);
-
+    if(ev.target.classList[0]){
+        x = ev.target;
+        console.log(x);
+    }
+  }
+});
+removebutton.addEventListener('click',function(){
+    lists = document.querySelectorAll('.checked');
+    lists.forEach(list => {
+        list.remove();
+       document.getElementById('carrier').innerHTML = counter-=1;
+    })
+})
 
 //clear
-var clearButton = document.getElementById("clear");
-clearButton.addEventListener("click", clearToDoItem);
 function clearToDoItem() {
-  document.getElementById('myList').style.display="none";
+  document.getElementById('myList').innerHTML=""; 
+  document.getElementById('carrier').innerHTML = reset;
 }
-  
+
